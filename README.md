@@ -147,6 +147,15 @@ A tag is a label applied to a specific version of a Docker image within a reposi
 
 <img src="https://github.com/user-attachments/assets/80727454-55e0-478c-9a86-8c4ad750a28a" width="300px">
 
+### Docker Volumne
+The persistent storage for docker.
+
+<img src="https://github.com/user-attachments/assets/123f77f7-d5b9-4da8-a812-87923e2d95aa" width="300px">
+
+### Docker Port Mapping
+The docker container run in an isolation. So the port of the container is also isolated to system. To interact we have to map the port.
+
+<img src="https://github.com/user-attachments/assets/f344478b-1e50-4ac3-a434-46460ad6bc4d" width="300px">
 
 ### Docker Networks
 A Docker network is a virtual network interface that enables communication between Docker containers.
