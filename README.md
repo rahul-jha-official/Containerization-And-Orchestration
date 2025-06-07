@@ -115,6 +115,22 @@ A Docker network is a virtual network interface that enables communication betwe
 - **Overlay**
 - **Macvlan**
 
+### Dockerfile
+Images are created using Dockerfiles, which specify the steps to build the image, including copying files, installing dependencies, and configuring settings.
+
+| Command | Description | Syntax |
+|--|--|--|
+| `FROM` | Specifies the base image for the container | `FROM <image>:<tag>` |
+| `USER` | Specifies the user that should be switched to, before executing subsequent commands | `USER <user_name_or_id>` |
+| `WORKDIR` | Sets the working directory (in the image file system) | `WORKDIR <path>` |
+| `EXPOSE` | Informs Docker that the container will listen to the specified internal port at run time | `EXPOSE <port>` |
+| `ARG` | Defines variables that can be used within the build process or can be passed via "docker build" command | `ARG <variable_name>=<default_value>` |
+| `COPY` | Copies specifies files or directories from the host machine into the image | `COPY <source_path> <destination_path>` |
+| `RUN` | Executes the specified command during the build process | `RUN <command>` |
+| `ENTRYPOINT` | Specifies the primary command to be run when a container is started | `ENTRYPOINT ["executable", "arg1", "arg2", …]` |
+
+### Multi-Stage Dockerfile
+Multi-stage Dockerfile is a technique while helps in optimizing the final image size by creating intermediate images and eliminating unnecessary build artifacts.
 
 ### Docker Hub Repositories
 1. Public Repository
