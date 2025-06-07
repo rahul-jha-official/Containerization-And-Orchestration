@@ -106,9 +106,35 @@ A container runtime is responsible for:
 - Running the containerized application
 - Managing container lifecycle (start, stop, restart, remove)
 
+### Why Virtualization is Containerization is so efficient ?
+Most production environments use both:
+- Use virtual machines for isolation and security at the infrastructure layer.
+- Run containers inside those VMs for fast, scalable application deployment.
+
+
+<img src="https://github.com/user-attachments/assets/85609d49-2fa8-43b4-97a9-eb35cde26bb1" width= "300px">
+
+Analogy: Think of a VM as a house, and a container as a room in that house. If you want full control, including different plumbing and electrical systems (different OS), you need separate houses. But if all your applications can share the same systems, rooms are much more efficient.
+
 
 ## [Docker](#docker)
 Docker is a containerization tool that packages applications with their dependencies for consistent and efficient deployment across diverse environments.
+
+### Docker Desktop Architechture 
+- WSL (Windows Subsystem for Linux) is a compatibility layer for running Linux natively on Windows, without using a virtual machine or dual boot. WSL lets developers run a real Linux environment (bash shell, command-line tools, even Docker) directly on Windows, side-by-side with their Windows applications.
+  - WSL 1 - Translation layer (no Linux kernel). Uses Windows NT kernel. Good Performance.
+  - WSL 2 - Lightweight VM with real Linux kernel. Full Linux Kernel. Excellent Performance.
+- Docker API: The Docker API is a RESTful interface that allows you to programmatically control Docker—including actions like creating containers, pulling images, and managing networks or volumes. You can use the Docker API to:
+  - Automate container operations
+  - Build custom tools or dashboards
+  - Integrate Docker into CI/CD pipelines
+- The Docker Daemon (dockerd) is the core background service of Docker that manages everything: containers, images, networks, and volumes. It listens for Docker API requests and executes them. It manages container lifecycle and interacts with the host OS. It's a long-running process on your system. It communicates with:
+  - The Docker CLI (docker commands)
+  - Other tools (like Docker Compose, Docker API clients)
+  - The container runtime (e.g., containerd and runc)
+
+![image](https://github.com/user-attachments/assets/b13a0727-922d-4cee-8fbc-0cd5da0dedd3)
+
 
 ### Docker Image
 A self-contained package with all the components needed to run a software application, such as code, dependencies, and environment settings.
