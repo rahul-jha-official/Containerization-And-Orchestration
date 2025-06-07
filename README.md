@@ -162,6 +162,13 @@ A Docker network is a virtual network interface that enables communication betwe
 ### Dockerfile
 Images are created using Dockerfiles, which specify the steps to build the image, including copying files, installing dependencies, and configuring settings.
 
+```Dockerfile
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+COPY published/ ./
+ENTRYPOINT [ "dotnet", "GreetingAPI.dll" ]
+```
+
 | Command | Description | Syntax |
 |--|--|--|
 | `FROM` | Specifies the base image for the container | `FROM <image>:<tag>` |
@@ -175,6 +182,31 @@ Images are created using Dockerfiles, which specify the steps to build the image
 
 ### Multi-Stage Dockerfile
 Multi-stage Dockerfile is a technique while helps in optimizing the final image size by creating intermediate images and eliminating unnecessary build artifacts.
+
+```Dockerfile
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY . .
+RUN dotnet publish "GreetingAPI.csproj" -o /published /p:UseAppHost=false
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+COPY --from=build /published .
+ENTRYPOINT [ "dotnet", "GreetingAPI.dll" ]
+```
+
+### Docker Ignore file
+The docker ignore file is the file contains the list of files to exclude in the final image. The file should be named .dockerignore.
+
+```.dockerignore
+**/bin
+**/obj
+**/Properties
+**/Dockerfile
+**/.dockerignore
+**/appsettings.Development.json
+**/*.sln
+```
 
 ### Docker Hub Repositories
 1. Public Repository
@@ -212,3 +244,4 @@ Multi-stage Dockerfile is a technique while helps in optimizing the final image 
 | `docker volume rm vol-name` | Remove volume | |
 | `docker volume create <volume_name>` | Create a new Docker volume | |
 | `docker volume inspect <volume_name>` | Inspect a Docker volume for details | |
+| `dotnet publish .\App.csproj -o published` | for creating build | - **/p:UseAppHost=false**: for skip creation of executable file | 
