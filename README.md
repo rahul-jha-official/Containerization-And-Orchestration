@@ -61,6 +61,8 @@ Issues:
 ## [Containerization](#containerization)
 Containerization is a lightweight form of operating system virtualization that allows you to package an application along with everything it needs to run—like libraries, dependencies, configuration files—into a single, portable unit called a container.
 
+<img src="https://github.com/user-attachments/assets/8176443f-998c-4398-b09b-c88c2e40f0f5" width= "300px">
+
 ### Benefits of Containerization
 - **Isolation** - Containers provide a level of isolation for applications, preventing conflicts with other applications or the host system. Each container operates independently, enhancing security and reliability.
 - **Portability** - Containers encapsulate applications and their dependencies, ensuring consistency across various environments. This portability enables developers to build, test, and deploy applications seamlessly across different platforms.
@@ -91,6 +93,19 @@ OS Kernel is core part of Operating System that directly controls hardware resou
 
 **OS User Space**<br>
 OS User Space is the space where most system services and your application lives. Program here can't access hardware directly, they need to go through OS Kernel. This separation keeps your system stable and secure.<br>
+
+### Container Runtime
+A container runtime is a low-level software component that creates, runs, and manages containers on a host system.
+
+A container runtime is responsible for:
+- Pulling container images from a registry (e.g., Docker Hub)
+- Unpacking the image layers into a container
+- Creating isolated environments using Linux features like:
+  - Namespaces (for process, network, file system isolation)
+  - Cgroups (for limiting CPU, memory, etc.)
+- Running the containerized application
+- Managing container lifecycle (start, stop, restart, remove)
+
 
 ## [Docker](#docker)
 Docker is a containerization tool that packages applications with their dependencies for consistent and efficient deployment across diverse environments.
