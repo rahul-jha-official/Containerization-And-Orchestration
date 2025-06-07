@@ -198,7 +198,7 @@ Multi-stage Dockerfile is a technique while helps in optimizing the final image 
 | `docker images` | List all images on the local machine | |
 | `docker rmi <image>` | Remove an image from the local machine | - **--force**: to remove image forcefully even if it is running |
 | `docker run <image>` | Create and start a container from an image | - **-d**: Run in detached mode<br>- **-p <host_port>:<container_port>**: Map ports<br>- **--name <container_name>**: Assign a name to the container<br>- **-v <host_path>:<container_path>**: Mount a volume<br> - **-rm**: Remove container once it stops |
-| `docker ps` | List running containers | - **-a**: Show all containers, including stopped ones |
+| `docker ps` | List running containers | - **-a/--all**: Show all containers, including stopped ones |
 | `docker stop <container>` | Stop a running container | |
 | `docker start <container>` | Start a stopped container | |
 | `docker restart <container>` | Restart a running or stopped container | |
