@@ -209,5 +209,6 @@ Multi-stage Dockerfile is a technique while helps in optimizing the final image 
 | `docker network create <network_name>` | Create a new Docker network | - **--driver <driver_name>**: Specify the network driver (e.g., bridge, overlay) |
 | `docker network inspect <network_name>` | Inspect a Docker network for details | |
 | `docker volume ls` | List all Docker volumes | |
+| `docker volume rm vol-name` | Remove volume | |
 | `docker volume create <volume_name>` | Create a new Docker volume | |
 | `docker volume inspect <volume_name>` | Inspect a Docker volume for details | |
