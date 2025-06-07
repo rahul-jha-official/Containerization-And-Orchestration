@@ -145,6 +145,9 @@ A lightweight, isolated, and executable instance created from a Docker image.
 ### Docker Tag
 A tag is a label applied to a specific version of a Docker image within a repository. It helps differentiate different versions or configurations of the same application.
 
+<img src="https://github.com/user-attachments/assets/80727454-55e0-478c-9a86-8c4ad750a28a" width="300px">
+
+
 ### Docker Networks
 A Docker network is a virtual network interface that enables communication between Docker containers.
 
