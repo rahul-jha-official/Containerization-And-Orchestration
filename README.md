@@ -171,6 +171,10 @@ A Docker network is a virtual network interface that enables communication betwe
 ### Dockerfile
 Images are created using Dockerfiles, which specify the steps to build the image, including copying files, installing dependencies, and configuring settings.
 
+Usefull Links:
+- [Dotnet Container](https://learn.microsoft.com/en-us/dotnet/core/docker/container-images)
+- [Dotnet Container Readme](https://github.com/dotnet/dotnet-docker/blob/main/README.aspnet.md)
+
 ```Dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
@@ -228,7 +232,8 @@ The docker ignore file is the file contains the list of files to exclude in the 
 - **Security:** Private repositories are essential for sensitive or proprietary applications where you want to control who can access and use your container images.
 - **Paid Access:** Private repositories often come with subscription fees. You may need a paid plan to create and manage private Docker images.\
 
-Note: [Link to Docker Hub]([http://example.com](https://hub.docker.com/)){:target="_blank"}
+[Link to Docker Hub](https://hub.docker.com)
+
 
 ### Docker Commands
 | Command | Description | Properties |
