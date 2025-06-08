@@ -192,6 +192,8 @@ ENTRYPOINT [ "dotnet", "GreetingAPI.dll" ]
 | `COPY` | Copies specifies files or directories from the host machine into the image | `COPY <source_path> <destination_path>` |
 | `RUN` | Executes the specified command during the build process | `RUN <command>` |
 | `ENTRYPOINT` | Specifies the primary command to be run when a container is started | `ENTRYPOINT ["executable", "arg1", "arg2", …]` |
+| `ENV` | To Set Environment Varianble | |
+
 
 ### Multi-Stage Dockerfile
 Multi-stage Dockerfile is a technique while helps in optimizing the final image size by creating intermediate images and eliminating unnecessary build artifacts.
