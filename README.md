@@ -228,7 +228,7 @@ The docker ignore file is the file contains the list of files to exclude in the 
 - **Security:** Private repositories are essential for sensitive or proprietary applications where you want to control who can access and use your container images.
 - **Paid Access:** Private repositories often come with subscription fees. You may need a paid plan to create and manage private Docker images.\
 
-
+Note: <a href="https://hub.docker.com/" target="_blank">Link to Docker Hub</a>
 
 ### Docker Commands
 | Command | Description | Properties |
