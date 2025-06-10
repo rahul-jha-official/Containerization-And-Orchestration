@@ -194,6 +194,8 @@ ENTRYPOINT [ "dotnet", "GreetingAPI.dll" ]
 | `RUN` | Executes the specified command during the build process | `RUN <command>` |
 | `ENTRYPOINT` | Specifies the primary command to be run when a container is started | `ENTRYPOINT ["executable", "arg1", "arg2", …]` |
 | `ENV` | To Set Environment Varianble | |
+| `ADD` | The ADD command in a Dockerfile is used to copy files, directories, or remote files into a Docker image during build time. It’s similar to COPY, but with a few extra features. | |
+| `CMD` | The CMD instruction in a Dockerfile specifies the default command to run when a container starts. CMD can be overridden at runtime: `docker run myimage echo "Hello"` | | 
 
 
 ### Multi-Stage Dockerfile
@@ -261,6 +263,7 @@ The docker ignore file is the file contains the list of files to exclude in the 
 | `docker volume rm vol-name` | Remove volume | |
 | `docker volume create <volume_name>` | Create a new Docker volume | |
 | `docker volume inspect <volume_name>` | Inspect a Docker volume for details | |
+| `docker cp <container>:<source_path> <dest_path>` | The docker cp command lets you copy files between your host system and a Docker container. | |
 | `dotnet publish .\App.csproj -o published` | for creating build | - **/p:UseAppHost=false**: for skip creation of executable file | 
 
 ## [Docker Compose](#docker-compose)
