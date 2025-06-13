@@ -284,3 +284,4 @@ Docker Compose uses a YAML file (docker-compose.yml) to configure the services, 
 - **Scalability**: Docker Compose allows you to scale services effortlessly. You can specify how many instances of a service you want to run, and Compose will handle the networking and load balancing between them. This is useful for simulating production-like environments.
 - **Volume Management**: Compose provides built-in support for persistent storage with volumes, ensuring that data remains available even when containers are stopped and restarted. This is crucial for services like databases where data persistence is required.
 - **Isolation**: Compose keeps services isolated from each other unless explicitly defined to communicate. This ensures that different services don’t interfere with each other unless necessary, improving the stability of your environment.
+
